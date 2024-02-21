@@ -1,0 +1,87 @@
+body {
+    background-color: #80663c;
+    margin: 0;
+    font-family: monospace, sans-serif;
+}
+
+p {
+    max-width: 900px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    color:#d3ed2b;
+}
+
+.inline-text {
+    font-family: sans-serif;
+    padding: 20px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    color:#fffc3d;
+}
+
+::selection {
+    background-color: #d3ed2b;
+    color: black;
+}
+
+.navbar-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.navbar {
+    display: inline-block;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+.navbar a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+.navbar a:hover {
+    background-color: #fffc3d;
+    color: black;
+    text-decoration: none;
+  }
+  
+@keyframes scrollText {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+#draggable-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+#draggable-image {
+  width: 200px;
+  height: auto;
+  cursor: grab;
+}
+
+.draggable {
+  width: 50px;
+  height: auto;
+  cursor: grab;
+  position: absolute;
+  outline: none;
+  -webkit-user-drag: none;
+}
