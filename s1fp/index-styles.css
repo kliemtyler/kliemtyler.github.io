@@ -1,11 +1,11 @@
 body {
-    background-color: #80663c;
-    margin: 0;
-    font-family: monospace, sans-serif;
-    background-image: url('greenchair3.png');
-    background-size: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-color: #80663c;
+  margin: 0;
+  font-family: monospace, sans-serif;
+  background-image: url('greenchair3.png');
+  background-size: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 p {
@@ -61,6 +61,11 @@ p {
     display: flex;
     align-items: center;
   }
+
+.scrolling-link {
+  text-decoration: none;
+  color: black;
+}
 
 .colored-bar {
     position: fixed;
