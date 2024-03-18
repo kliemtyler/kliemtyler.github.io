@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODE TO THE NEW JERSEY DINER</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        var currentIndex = 0;
+
+        function moveSlide(n) {
+            var slides = document.querySelectorAll('.carousel-images figure');
+            var totalSlides = slides.length;
+
+            currentIndex += n;
+
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            }
+
+            var captions = document.querySelectorAll('.carousel-images figcaption');
+            captions.forEach(caption => {
+                caption.style.display = 'none';
+            });
+
+            captions[currentIndex].style.display = 'block';
+
+            slides.forEach(slide => {
+                slide.style.display = 'none';
+            });
+
+            slides[currentIndex].style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="marquee">
+        <span>ODE TO THE NEW JERSEY DINER!</span>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-images">
+                <figure>
+                    <img src="cdiner1.jpeg" alt="A vintage color film photograph of a chrome Art Deco roadside diner. The lights are on inside the diner, as well as neon lights on the exterior. It's a wielding presence at night when the photo was taken.">
+                    <figcaption>If I told you that a Jersey diner made its way to Paris, you’d have no choice but to believe me. <br><br> Once sitting along the stretch of Route 1 and Quakerbridge Road in Princeton, N.J., the Clarksville Diner, née Princeton Grill, stands wielding on the Seine, only a 10-minute drive to the Eiffel Tower. As if a scene from<span><em>Up</em></span>, the 1930s-era chrome building looks wrong, tucking itself between the sprawling skyscrapers of the Boulogne-Billancourt business district. Its life as a restaurant in the throes of the Northeast has long met its end. <br><br> Before making its way to Paris, it ended up in Decorah, Iowa, pictured here in a vintage postcard.</figcaption>
+                </figure>
+                <figure style="display: none;">
+                    <img src="cdiner2.jpeg" alt="A black-and-white film photograph of the roadside diner's interior. A waiter stares pointedly at the camera from behind the bar counter. A patron, facing away from the camera, reads a newspaper at the bar stool. The corridor is narrow. The photograph itself is damaged with scratches from development.">
+                    <figcaption>Pictured as its former name, the Princeton Grill. The date this was taken is unknown. Patrons enjoy their meal the old-fashioned way. A little ominous.</figcaption>
+                </figure>
+                <figure style="display: none;">
+                    <img src="cdiner3.jpeg" alt="A black-and-white film photograph of the same roadside diner, though not as glamorous. There's a mound of dirt out front. No lights are on. Everything feels empty.">
+                    <figcaption>The restaurant, now Clarksville Diner, in 1987 a year after officially closing in New Jersey. In 1988, it would move itself to Decorah.</figcaption>
+                </figure>
+                <figure style="display: none;">
+                    <img src="cdiner4.png" alt="A color photograph of the roadside diner, now far from the camera. It stands between skyscrapers and urban buildings, which is a little disorienting. Some plants border the diner's exterior, giving it some air of majesty.">
+                    <figcaption>Welp … there's it in Paris. It's now a multimedia space. It was moved to its present location in 1998.</figcaption>
+                </figure>
+                <figure style="display: none;">
+                    <img src="cdiner5.jpeg" alt="A graphite drawing of the roadside diner. It looks like it doesn't have that much depth. The artist has signed their name beneath the photo, which reads: Clarksville Diner, Decorah, Iowa. Frank Lamartina, 2000.">
+                    <figcaption>Someone was so kind enough to hand-draw a picture of the diner in its Iowan iteration. Check out Frank Lamartina's<a href="http://www.franklamartina.com/diners.html">diner series</a>!</figcaption>
+                </figure>
+            </div>
+            <button class="prev" aria-label="Previous" onclick="moveSlide(-1)"></button>
+            <button class="next" aria-label="Next" onclick="moveSlide(1)"></button>
+        </div>
+        <footer>
+            <p>T.K. Diner Historical Association, Hamilton, NJ 08619 © 1998, 2010 All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
