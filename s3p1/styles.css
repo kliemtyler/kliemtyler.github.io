@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "Reddit Mono";
+    src: url("RedditMono-Regular.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    ascent-override: 85%;
+}
+
+.font-weight_light {
+    font-weight: 300;
+}
+
+.font-weight_medium {
+    font-weight: 500;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    padding: none;
+    margin: none;
+    font-family: "Reddit Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    background-color: #3a3070;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    color: white;
+}
+
+p + p {
+    margin-top: -0.5em;
+}
+
+.underline {
+    text-decoration: underline;
+    -webkit-text-decoration: underline;
+    text-decoration-thickness: 5%;
+    -webkit-text-decoration-thickness: 5%;
+    text-underline-offset: 20%;
+    -webkit-text-underline-offset: 20%;
+    text-decoration-skip-ink: none;
+    -webkit-text-decoration-skip: none;
+}
+
+.selector {
+    text-indent: 20px;
+}
+
+button.option-button {
+    background: none;
+    box-shadow: none !important;
+    border: none;
+    padding: 5px 10px;
+    margin: 0;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    line-height: inherit;
+    box-shadow: none !important;
+    -webkit-box-shadow: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  button.option-button:focus {
+    outline: none;
+  }
+
+.plain_extralarge {
+    font-family: "Reddit Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+}
+
+@media only screen and (min-width: 760px) {
+    .plain_extralarge {
+        font-family: "Reddit Mono", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 64px;
+        line-height: 68px;
+        font-weight: 400;
+        letter-spacing: -0.04em;
+    }
+
+:root {
+    text-indent: 10%;
+}
+}

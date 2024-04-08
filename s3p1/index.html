@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARDROBE ON ENTRY</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="plain_extralarge">
+        <p>I/E. PHILADELPHIA APARTMENT - DAY</p>
+        <p>FADE IN.</p>
+        <p>TYLER (21, man, bookish hippie) stands outside his apartment. It rains. He manhandles the door, but it doesn’t budge. Tyler’s roommate DELANEY (22, woman, tall klutz) is on the other side of the door. She has a game to play.</p>
+        <p class="underline">TYLER</p>
+        <p>Is anyone home? My keys aren’t working.</p>
+        <p class="underline">DELANEY</p>
+        <p>...</p>
+        <p class="underline">TYLER</p>
+        <p>Hello?</p>
+        <p class="underline">DELANEY</p>
+        <p>...</p>
+        <p class="underline">TYLER</p>
+        <p>Hi? Sholem-aleykhem? Hallo? Ruz ə xəjr bu? Do I have to try another language?</p>
+        <p>Delaney’s breath maintains a steady pace. She sneezes, abruptly. Tyler hears this and shuffles back from the door in frustration.</p>
+        <p class="underline">TYLER (CONT'D)</p>
+        <p>Delaney! That’s your sneeze and yours alone! It’s time to let me in.</p>
+        <p class="underline">DELANEY</p>
+        <p>You need a password!</p>
+        <p class="underline">TYLER</p>
+        <p>I don’t know what more you want from me, other than the fact that it’s pouring buckets outside and my umbrella’s fucked.</p>
+        <p>Tyler squats on the small stoop of the door and shoots his hand up the mail slot. Delaney jumps back herself, agog.</p>
+        <p class="underline">DELANEY</p>
+        <p>Tyler, that’s not going to help you. Could you tell me what you’re wearing right now?</p>
+        <p class="underline">TYLER</p>
+        <p>Why’s that important?</p>
+        <p class="underline">DELANEY</p>
+        <p>If I like what you’re wearing, maybe I’ll let you in.</p>
+        <p class="underline">TYLER</p>
+        <p>The usual! My flannel with the velour details. And the old ass boots that make me sound like a horse when walking down the stairs. And my wool flared pants. The ones that smell weird when the rain gets on the fabric.</p>
+        <p class="underline">DELANEY</p>
+        <p>Hm, well ...</p>
+        <button onclick="selectOption('option1', this)" class="option-button" id="option1-button">‣ DELANEY LIKES WHAT TYLER’S WEARING</button>
+        <button onclick="selectOption('option2', this)" class="option-button" id="option2-button">‣ SHE DOESN’T</button>
+    </div>
+
+    <div id="option1" class="plain_extralarge" style="display:none">
+        <p>Delaney thinks for a second and opens the door with a funny face. Tyler glares at her. As he approaches the door, Delaney blocks the doorway with her body.</p>
+        <p class="underline">TYLER</p>
+        <p>I’ll have you know that I’m still wearing my flannel with the velour details, the old ass boots that make me sound like a horse when walking down those stairs behind you, and my wool flared pants that now definitely smell weird because of the rain.</p>
+        <p>Delaney smiles and claps her hands gently. She retreats backward but stumbles over the couch, rendering her upside down. Tyler laughs.</p>
+        <p class="underline">DELANEY</p>
+        <p>Well, you got me there.</p>
+        <p class="underline">TYLER</p>
+        <p>Yeah, yeah ... I should probably change.</p>
+        <p>FADE OUT.</p>
+    </div>
+
+    <div id="option2" class="plain_extralarge" style="display:none">
+        <p>Delaney thinks for a second and opens the door with a funny face. Tyler glares at her. As he approaches the door, Delaney immediately closes it.</p>
+        <p class="underline">TYLER</p>
+        <p>What the fuck?</p>
+        <p class="underline">DELANEY</p>
+        <p>I think Rae will be home in an hour. Have fun in the rain.</p>
+        <p class="underline">TYLER</p>
+        <p>Did you not like the flannel?</p>
+        <p>FADE OUT.</p>
+    </div>
+
+    <script>
+        function selectOption(option, button) {
+            button.disabled = true;
+
+            var otherOption = option === 'option1' ? 'option2' : 'option1';
+            document.getElementById(otherOption + '-button').style.display = 'none';
+
+            document.querySelectorAll('[id^="option"]').forEach(function(el) {
+                el.style.display = 'none';
+            });
+
+            document.getElementById(option).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
